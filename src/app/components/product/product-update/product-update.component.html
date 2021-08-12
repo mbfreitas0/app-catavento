@@ -1,0 +1,27 @@
+<mat-card>
+    <mat-card-title>Alterar Produto</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Descrição" [(ngModel)]="product.descricao" name="descricao">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Status A - Ativo ou I - Inativo" [(ngModel)]="product.status" name="status">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Estoque mínimo" [(ngModel)]="product.estoque_min" name="estoque_min">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Estoque máximo" [(ngModel)]="product.estoque_max" name="estoque_max">
+        </mat-form-field>
+    </form>
+
+    <button mat-raised-button (click)="createProduct()" color="primary">
+        Salvar
+    </button>
+    <button mat-raised-button (click)="cancel()">
+        Cancelar
+    </button>
+</mat-card>
